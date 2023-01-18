@@ -1,50 +1,22 @@
-# Welcome to [Astro](https://astro.build)
+# My portfolio
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+> 🐯 My personal portfolio made with **Astro** and **Tailwind** :)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![img](https://media.discordapp.net/attachments/920417185451634764/1065175752863141979/image.png?width=1193&height=671)
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## Run project
 
+- Clone repo `git clone https://github.com/n2shh/portfolio`
+- Install packages with `npm install`
+- Run development server with `npm run dev`
+- Build your production site with `npm run build`
 
-## 🚀 Project Structure
+#### 💻 This project is free to use, you can fork and clone this repo for what you want use
 
-Inside of your Astro project, you'll see the following folders and files:
+## Author
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Nicolas Sosa - [GitHub](https://github.com/n2shh) · [Twitter](https://twitter.com/n2shk)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Hire me
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Looking for a developer to build your next idea? Get in touch in Discord `nish#0690` or [n2shkd@gmail.com](mailto:n2shkd@gmail.com)
