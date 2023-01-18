@@ -1,0 +1,48 @@
+---
+import tagsObj from "../data/tags.json";
+
+export interface Props {
+  tags: number[];
+  image: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
+const { tags, image, title, description, link } = Astro.props;
+---
+
+<a href={link}>
+  <div
+    class="w-[21rem] h-[24rem] m-4 border border bg-black border-[#3c4751] border-gray-200 rounded-2xl flex flex-col justify-between hover:scale-105 ease-in-out transform duration-200 cursor-pointer"
+  >
+    <div>
+      <div>
+        <img src={image} alt="" class="rounded-tl-2xl rounded-tr-2xl" />
+      </div>
+      <div class="py-4 px-5">
+        <div class="mb-4">
+          {
+            tags.map((tag) => {
+              return (
+                <span
+                  class={
+                    "inline-block text-xs px-2 py-1 rounded-full text-white font-semibold tracking-wide mr-2"
+                  }
+                  style={{
+                    backgroundColor: tagsObj[tag - 1].color + "20",
+                    color: tagsObj[tag - 1].color,
+                  }}
+                >
+                  {tagsObj[tag - 1].name}
+                </span>
+              );
+            })
+          }
+        </div>
+        <h3 class="text-mpurple font-semibold text-lg">{title}</h3>
+        <h3 class="text-swhite text-sm">{description}</h3>
+      </div>
+    </div>
+  </div>
+</a>

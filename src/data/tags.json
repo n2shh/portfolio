@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "React",
+    "color": "#61DAFB"
+  },
+  {
+    "id": 2,
+    "name": "Next",
+    "color": "#ffa67a"
+  },
+  {
+    "id": 3,
+    "name": "Tailwind",
+    "color": "#38B2AC"
+  },
+  {
+    "id": 4,
+    "name": "Express",
+    "color": "#70acff"
+  },
+  {
+    "id": 5,
+    "name": "Socket.io",
+    "color": "#ff7070"
+  },
+  {
+    "id": 6,
+    "name": "MongoDB",
+    "color": "#47A248"
+  },
+  {
+    "id": 7,
+    "name": "Discord",
+    "color": "#7289DA"
+  },
+  {
+    "id": 8,
+    "name": "Javascript",
+    "color": "#F7DF1E"
+  },
+  {
+    "id": 8,
+    "name": "OS",
+    "color": "#FFFFFF"
+  }
+]

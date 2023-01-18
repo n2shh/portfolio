@@ -1,0 +1,23 @@
+[
+  {
+    "tags": [1, 3],
+    "image": "https://media.discordapp.net/attachments/1064081515652321301/1064776527054635148/imagee.png?width=1193&height=671",
+    "title": "Portfolio",
+    "description": "My portfolio made with react and tailwind",
+    "link": "https://nishkd.vercel.app/"
+  },
+  {
+    "tags": [1, 4, 5, 9],
+    "image": "https://media.discordapp.net/attachments/1064081515652321301/1064776526832349305/image.png?width=1193&height=671",
+    "title": "QR Scanner",
+    "description": "A mobile QR Scanner and web page with a QR that performs an action when is scanned with the mobile app",
+    "link": "https://github.com/n2shh/qrscanner"
+  },
+  {
+    "tags": [1, 3],
+    "image": "https://media.discordapp.net/attachments/1064081515652321301/1064776526526160926/brave_4DqjTkuTt8.png?width=1193&height=671",
+    "title": "Siesta",
+    "description": "Landing page for a discord bot of music with interactive dashboard made in react",
+    "link": "https://github.com/n2shh"
+  }
+]
