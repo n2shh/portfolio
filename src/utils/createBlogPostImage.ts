@@ -97,5 +97,5 @@ export const createBlogPostImage = async (title: string, name: string) => {
 
   await browser.close();
 
-  return `public/images/posts/${name}.png`;
+  return `/images/posts/${name}.png`;
 };
