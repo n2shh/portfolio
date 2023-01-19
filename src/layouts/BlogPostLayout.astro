@@ -42,7 +42,7 @@ const imageSrc = await createBlogPostImage(title, imgUrl);
     <meta property="og:description" content={description} />
     <meta
       property="og:image"
-      content={"https://nish-nu.vercel.app" + imageSrc}
+      content={"https://nish-nu.vercel.app/" + imageSrc}
     />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
@@ -50,7 +50,7 @@ const imageSrc = await createBlogPostImage(title, imgUrl);
     <meta property="twitter:description" content={description} />
     <meta
       property="twitter:image"
-      content={"https://nish-nu.vercel.app" + imageSrc}
+      content={"https://nish-nu.vercel.app/" + imageSrc}
     />
 
     <!-- Link tags -->

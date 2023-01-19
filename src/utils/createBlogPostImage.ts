@@ -3,7 +3,7 @@ import { existsSync } from "fs";
 
 export const createBlogPostImage = async (title: string, name: string) => {
   if (existsSync(`public/images/posts/${name}.png`)) {
-    return `public/images/posts/${name}.png`;
+    return `images/posts/${name}.png`;
   }
 
   const browser = await puppeteer.launch();
@@ -97,5 +97,5 @@ export const createBlogPostImage = async (title: string, name: string) => {
 
   await browser.close();
 
-  return `/images/posts/${name}.png`;
+  return `images/posts/${name}.png`;
 };
