@@ -47,5 +47,18 @@ const { title, description } = Astro.props;
 <style is:global>
   :root {
     @apply bg-[#131C2A] font-geometria duration-300;
+    scrollbar-width: 0px;
+  }
+
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  *::-webkit-scrollbar-track {
+    width: 0px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    width: 0px;
   }
 </style>

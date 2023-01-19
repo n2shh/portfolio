@@ -22,7 +22,7 @@
   {
     "id": 5,
     "name": "Socket.io",
-    "color": "#ff7070"
+    "color": "#a04aa8"
   },
   {
     "id": 6,
@@ -43,5 +43,15 @@
     "id": 8,
     "name": "OS",
     "color": "#FFFFFF"
+  },
+  {
+    "id": 9,
+    "name": "Astro",
+    "color": "#ff7070"
+  },
+  {
+    "id": 10,
+    "name": "Remix",
+    "color": "#F35777"
   }
 ]

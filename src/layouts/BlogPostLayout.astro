@@ -1,0 +1,155 @@
+---
+import Header from "../components/Header.astro";
+import tagsObj from "../data/tags.json";
+
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate: string;
+    tags: number[];
+  };
+}
+
+const {
+  content: { title, description, pubDate, tags },
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Og and tw -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="nish" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <!-- <meta property="og:image" content={image} /> -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <!-- <meta property="twitter:image" content={image} /> -->
+
+    <!-- Link tags -->
+    <link href="https://fonts.cdnfonts.com/css/geometria" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <Header />
+    <main class="flex flex-col max-w-[65ch] mx-auto text-justify">
+      <h1 class="self-center text-3xl text-swhite">{title}</h1>
+      <div class="flex flex-col items-center">
+        <div class="text-sm text-sgray pt-4 pb-2">
+          <time>{pubDate}</time>
+          <span>|</span>
+          <span>By Nicolas S.</span>
+        </div>
+        <div>
+          {
+            tags.map((tag) => {
+              return (
+                <span
+                  class={
+                    "inline-block text-xs px-2 py-1 rounded-full text-white font-semibold tracking-wide mr-2"
+                  }
+                  style={{
+                    backgroundColor: tagsObj[tag].color + "20",
+                    color: tagsObj[tag].color,
+                  }}
+                >
+                  {tagsObj[tag].name}
+                </span>
+              );
+            })
+          }
+        </div>
+      </div>
+      <article class="mt-12 text-xl">
+        <slot class="a" />
+      </article>
+    </main>
+  </body>
+</html>
+<style is:global>
+  :root {
+    @apply bg-[#131C2A] font-geometria duration-300;
+    scrollbar-width: 0px;
+  }
+  main {
+    @apply flex flex-col items-center min-h-screen text-swhite;
+  }
+  h1 {
+    @apply text-4xl font-bold text-swhite;
+  }
+
+  h2 {
+    @apply text-2xl font-bold text-swhite;
+  }
+
+  h3 {
+    @apply text-xl font-bold text-swhite;
+  }
+
+  p {
+    @apply text-lgray;
+  }
+
+  b {
+    @apply font-bold;
+  }
+
+  a {
+    @apply text-mpurple font-medium hover:underline underline-offset-2;
+  }
+
+  img {
+    @apply max-w-full h-auto my-8 rounded-xl border border-gpurple shadow shadow-gpurple;
+  }
+
+  code {
+    @apply font-scpro text-sm bg-[#ffffff20] rounded-md py-1;
+  }
+
+  pre {
+    @apply font-scpro rounded-xl border border-sgray p-4 my-8 text-sm overflow-y-auto;
+  }
+
+  pre > code {
+    @apply bg-[#00000000];
+  }
+
+  blockquote {
+    @apply font-scpro text-sm px-2 py-1 border-l-4 border-[#ffffff20];
+  }
+
+  ul {
+    @apply ml-8;
+  }
+
+  ul > li {
+    @apply list-disc text-lg pb-2;
+  }
+
+  ul > li::marker {
+    @apply text-sgray;
+  }
+</style>
