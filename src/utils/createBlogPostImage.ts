@@ -47,7 +47,7 @@ export const createBlogPostImage = async (title: string, name: string) => {
         align-items: center;
         height: 100vh;
         padding: 0 3rem;
-        word-break: break-all;
+        word-break: break-word;
       }
 
       h1 {
@@ -74,7 +74,7 @@ export const createBlogPostImage = async (title: string, name: string) => {
         <div class="text-bg">
             <div class="image">
                 <h1>${
-                  title.length > 35 ? title.slice(0, 35) + "..." : title
+                  title.length > 43 ? title.slice(0, 35) + "..." : title
                 }</h1>
                 <span class="nish">NISH</span>
             </div>

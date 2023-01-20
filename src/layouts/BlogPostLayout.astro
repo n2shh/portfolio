@@ -65,8 +65,8 @@ const imageSrc = await createBlogPostImage(title, imgUrl);
 
   <body>
     <Header />
-    <main class="flex flex-col max-w-[65ch] mx-auto text-justify">
-      <h1 class="self-center text-3xl text-swhite">{title}</h1>
+    <main class="flex flex-col max-w-[65ch] mx-auto text-justify px-5">
+      <h1 class="self-center text-3xl text-swhite text-center">{title}</h1>
       <div class="flex flex-col items-center">
         <div class="text-sm text-sgray pt-4 pb-2">
           <time>{pubDate}</time>
@@ -94,7 +94,7 @@ const imageSrc = await createBlogPostImage(title, imgUrl);
         </div>
       </div>
       <article class="mt-12 text-xl">
-        <slot class="a" />
+        <slot />
       </article>
     </main>
   </body>
