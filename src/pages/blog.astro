@@ -31,16 +31,16 @@ const posts = (await Astro.glob<Post>("./blog/*.{md,mdx}"))
       class="flex flex-col justify-center items-center h-[15rem] select-none"
     >
       <h1
-        class="text-6xl sm:text-6xl text-swhite text-center sm:leading-[85px] font-black"
+        class="text-5xl md:text-6xl text-swhite text-center leading-[85px] font-black"
       >
         Blog
       </h1>
-      <p class="text-sm sm:text-lg text-neutral-300 text-sgray">
+      <p class="text-lg text-neutral-300 text-sgray text-center">
         Discover the latest articles from nish about tech or programming.
       </p>
     </div>
     <div>
-      <div class="flex flex-col w-[50rem] gap-8">
+      <div class="flex flex-col w-auto mx-8 md:w-[45rem] gap-8">
         {
           posts.map((post) => (
             <BlogPost

@@ -26,14 +26,14 @@ const { url, title, description, pubDate, tags } = Astro.props;
         })
       }</time
     >
-    <span>•</span>
+    <span class="hidden sm:block">•</span>
     <div>
       {
         tags.map((tag) => {
           return (
             <span
               class={
-                "inline-block text-xs px-2 py-1 rounded-full font-semibold mr-2"
+                "hidden sm:inline-block text-xs px-2 py-1 rounded-full font-semibold mr-2"
               }
               style={{
                 backgroundColor: tagsObj[tag].color + "20",
