@@ -53,5 +53,10 @@
     "id": 10,
     "name": "Remix",
     "color": "#F35777"
+  },
+  {
+    "id": 11,
+    "name": "Guide",
+    "color": "#9e59ff"
   }
 ]

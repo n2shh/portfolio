@@ -1,0 +1,54 @@
+---
+import tagsObj from "../data/tags.json";
+
+export interface Props {
+  url: string;
+  title: string;
+  description: string;
+  pubDate: string;
+  tags: number[];
+}
+
+const { url, title, description, pubDate, tags } = Astro.props;
+---
+
+<a
+  href={url}
+  class="no-underline flex flex-col gap-2 rounded-xl hover:bg-black p-4 duration-300 w-full"
+>
+  <div class="text-swhite flex gap-2 items-center text-sm">
+    <time datetime={pubDate}
+      >{
+        new Date(pubDate).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })
+      }</time
+    >
+    <span>•</span>
+    <div>
+      {
+        tags.map((tag) => {
+          return (
+            <span
+              class={
+                "inline-block text-xs px-2 py-1 rounded-full font-semibold mr-2"
+              }
+              style={{
+                backgroundColor: tagsObj[tag].color + "20",
+                color: tagsObj[tag].color,
+              }}
+            >
+              {tagsObj[tag].name}
+            </span>
+          );
+        })
+      }
+    </div>
+  </div>
+  <div class="flex flex-col gap-2">
+    <h1 class="text-2xl text-mpurple text-bold">{title}</h1>
+    <p class="text-lgray text-normal">{description}</p>
+  </div>
+</a>

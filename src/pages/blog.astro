@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogPost from "../components/BlogPost.astro";
+
+export interface Post {
+  url: string;
+  frontmatter: {
+    title: string;
+    description: string;
+    pubDate: string;
+    tags: number[];
+    draft?: boolean;
+  };
+}
+
+const posts = (await Astro.glob<Post>("./blog/*.{md,mdx}"))
+  .filter((post) => !post.frontmatter.draft)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  );
+---
+
+<Layout
+  title="nish - blog"
+  description="Discover the latest articles from nish about tech or programming."
+>
+  <main>
+    <div
+      class="flex flex-col justify-center items-center h-[15rem] select-none"
+    >
+      <h1
+        class="text-6xl sm:text-6xl text-swhite text-center sm:leading-[85px] font-black"
+      >
+        Blog
+      </h1>
+      <p class="text-sm sm:text-lg text-neutral-300 text-sgray">
+        Discover the latest articles from nish about tech or programming.
+      </p>
+    </div>
+    <div>
+      <div class="flex flex-col w-[50rem] gap-8">
+        {
+          posts.map((post) => (
+            <BlogPost
+              url={post.url}
+              title={post.frontmatter.title}
+              description={post.frontmatter.description}
+              pubDate={post.frontmatter.pubDate}
+              tags={post.frontmatter.tags}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </main>
+</Layout>
