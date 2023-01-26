@@ -70,8 +70,14 @@ const imageSrc = await createBlogPostImage(title, imgUrl);
       <div class="flex flex-col items-center">
         <div class="text-sm text-sgray pt-4 pb-2">
           <time>{pubDate}</time>
-          <span>|</span>
-          <span>By Nicolas S.</span>
+          {
+            pubDate ? (
+              <>
+                <span>|</span>
+                <span>By Nicolas S.</span>
+              </>
+            ) : null
+          }
         </div>
         <div>
           {

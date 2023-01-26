@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
+
+import projects from "../data/projects.json";
+---
+
+<Layout
+  title="nish - blog"
+  description="Discover the latest articles from nish about tech or programming."
+>
+  <main>
+    <div
+      class="flex flex-col justify-center items-center h-[15rem] select-none"
+    >
+      <h1
+        class="text-5xl md:text-6xl text-swhite text-center leading-[85px] font-black"
+      >
+        Projects
+      </h1>
+    </div>
+    <div>
+      <div class="projects flex flex-col justify-center items-center">
+        <div class="flex xl:w-[70rem] lg:w-[50rem] flex-wrap w-[20rem]">
+          {
+            projects.map((project) => {
+              return (
+                <Project
+                  tags={project.tags}
+                  image={project.image}
+                  title={project.title}
+                  description={project.description}
+                  link={project.link}
+                />
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
